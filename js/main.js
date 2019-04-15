@@ -10,18 +10,20 @@ var theDateRecur = theDate.recur().every(1).years();
 var theEngagementRecur = theEngagement.recur().every(1).years();
 var theMarriageRecur = theMarriage.recur().every(1).years();
 
+update(); //initial run so that times are displayed immediately
+
 setInterval(function(){update();}, 1000);
 
 function update() {
     var canvas = document.getElementById('canvas');
-    
+
     if (theDateRecur.matches(moment())) {
         canvas.style.display = 'block';
         var dating = document.getElementsByClassName('dating'), i;
-        for (var i = 0; i < dating.length; i ++) {    
+        for (var i = 0; i < dating.length; i ++) {
             dating[i].style.display = 'block';
         }
-    }    
+    }
     if (theEngagementRecur.matches(moment())) {
         canvas.style.display = 'block';
         var engagement = document.getElementsByClassName('engagement'), i;
@@ -36,17 +38,17 @@ function update() {
             marriage[i].style.display = 'block';
         }
     }
-    
+
     var marDiff = moment.preciseDiff(moment(), theMarriage);
     var engDiff = moment.preciseDiff(moment(), theEngagement);
     var dateDiff = moment.preciseDiff(moment(), theDate);
-    
+
     daveAndKarlienDating.innerText = dateDiff;
     daveAndKarlienDating.innerHTML = dateDiff;
-    
+
     daveAndKarlienEngagement.innerText = engDiff;
     daveAndKarlienEngagement.innerHTML = engDiff;
-    
+
     daveAndKarlienMarriage.innerText = marDiff;
     daveAndKarlienMarriage.innerHTML = marDiff;
 }
