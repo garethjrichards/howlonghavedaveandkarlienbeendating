@@ -1,6 +1,11 @@
 canvas {
   display: none;
   position: fixed;
+  margin-top: 3em;
+  z-index: 5;
+  padding: 0;
+  background: black;
+  opacity:0.6;
 }
 
 /* .omghowlong {
@@ -11,27 +16,34 @@ canvas {
   margin: 0 5%;
   text-align: center;
   text-decoration: underline;
+  font-size: 42px;
   display: none;
+  color: #ff4c68;
 }
 
 .engagement {
   margin: 0 5%;
   text-align: center;
   text-decoration: underline;
+  font-size: 42px;
   display: none;
+  color: #ff4c68;
 }
 
 .marriage {
   margin: 0 5%;
   text-align: center;
   text-decoration: underline;
+  font-size: 42px;
   display: none;
+  color: #ff4c68;
+  z-index: 2;
 }
 
 body {
   font-size: 2em;
   line-height: 2;
-  padding: 2%;
+  padding: 0;
   text-align: center;
 }
 
