@@ -1,16 +1,9 @@
 canvas {
   display: none;
   position: fixed;
-  margin-top: 3em;
-  z-index: 5;
+  z-index: 1000;
   padding: 0;
-  background: black;
-  opacity:0.6;
 }
-
-/* .omghowlong {
-  margin: 0 5%;
-} */
 
 .dating {
   margin: 0 5%;
@@ -37,7 +30,6 @@ canvas {
   font-size: 42px;
   display: none;
   color: #ff4c68;
-  z-index: 2;
 }
 
 body {
@@ -45,10 +37,6 @@ body {
   line-height: 2;
   padding: 0;
   text-align: center;
-}
-
-.container-fluid {
-  padding: 2%;
 }
 
 .image {

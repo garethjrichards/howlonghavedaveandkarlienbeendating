@@ -66,7 +66,7 @@ function Firework( sx, sy, tx, ty ) {
 	this.angle = Math.atan2( ty - sy, tx - sx );
 	this.speed = 1;
 	this.acceleration = 1.15;
-	this.brightness = random( 50, 70 );
+	this.brightness = random( 70, 90 );
 }
 
 // update firework
@@ -131,7 +131,7 @@ function Particle( x, y ) {
 	this.gravity = 1.25;
 	// set the hue to a random number +-20 of the overall hue variable
 	this.hue = random( hue - 20, hue + 20 );
-	this.brightness = random( 50, 100 );
+	this.brightness = random( 60, 100 );
 	this.alpha = 1;
 	// set how fast the particle fades out
         this.decay = random( 0.05, 0.002 );
@@ -182,7 +182,7 @@ function loop() {
 	requestAnimFrame( loop );
 	
 	// increase the hue to get different colored fireworks over time
-	hue += 0.5;
+	hue += 0.9;
 	
 	// normally, clearRect() would be used to clear the canvas
 	// we want to create a trailing effect though
